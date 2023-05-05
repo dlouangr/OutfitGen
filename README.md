@@ -15,6 +15,12 @@ Either download the .exe from the releases, or run the jar file. If neither work
 download the source code and run the program from App.java.
 
 
+## Testing
+
+For convienience, several .txt files are available in the /test_clothing folder that load clothing into
+the wardrobe.
+
+
 ## Folder Structure (VSCode Default)
 
 The workspace contains two folders by default, where:
