@@ -1,0 +1,7 @@
+Sneakers,Shoes
+Boots,Shoes
+Sandals,Shoes
+Loafers,Shoes
+Dress Shoes,Shoes
+Flats,Shoes
+High Heels,Shoes

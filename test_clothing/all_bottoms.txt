@@ -1,0 +1,7 @@
+Jeans,Bottom
+Cargos,Bottom
+Leggings,Bottom
+Chinos,Bottom
+Sweatpants,Bottom
+Shorts,Bottom
+Skirt,Bottom

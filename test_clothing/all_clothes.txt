@@ -1,0 +1,21 @@
+T-Shirt,Top
+Button-Down Shirt,Top
+Tank Top,Top
+Polo Shirt,Top
+Sweatshirt,Top
+Blouse,Top
+Dress Shirt,Top
+Jeans,Bottom
+Cargos,Bottom
+Leggings,Bottom
+Chinos,Bottom
+Sweatpants,Bottom
+Shorts,Bottom
+Skirt,Bottom
+Sneakers,Shoes
+Boots,Shoes
+Sandals,Shoes
+Loafers,Shoes
+Dress Shoes,Shoes
+Flats,Shoes
+High Heels,Shoes

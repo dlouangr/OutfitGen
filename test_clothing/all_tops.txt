@@ -1,0 +1,7 @@
+T-Shirt,Top
+Button-Down Shirt,Top
+Tank Top,Top
+Polo Shirt,Top
+Sweatshirt,Top
+Blouse,Top
+Dress Shirt,Top
