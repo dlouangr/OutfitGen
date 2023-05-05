@@ -10,8 +10,8 @@ public class Panel3 extends JPanel {
     private JList<String> ruleList;
     private JComboBox<String> clothing1ComboBox;
     private JComboBox<String> clothing2ComboBox;
-    JCheckBox pairCheckbox;
-    JCheckBox noPairCheckbox;
+    JRadioButton pairRadio;
+    JRadioButton noPairRadio;
     private JButton btnDelete;
     private JButton btnRefresh;
 
@@ -37,14 +37,14 @@ public class Panel3 extends JPanel {
          * Create a Pair or Don't Pair check box and surround them in a panel
          */
         JPanel pairPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        pairCheckbox = new JCheckBox("Pair");
-        noPairCheckbox = new JCheckBox("Don't Pair");
+        pairRadio = new JRadioButton("Pair");
+        noPairRadio = new JRadioButton("Don't Pair");
 
         // Set to "Don't Pair" by default
-        noPairCheckbox.setSelected(true);
+        noPairRadio.setSelected(true);
 
-        pairPanel.add(noPairCheckbox);
-        pairPanel.add(pairCheckbox);
+        pairPanel.add(noPairRadio);
+        pairPanel.add(pairRadio);
 
         /**
          * Clothing 1 combo box
@@ -74,8 +74,8 @@ public class Panel3 extends JPanel {
         btnRefresh.addActionListener(new RefreshButtonListener());
 
         CheckBoxListener checkBoxListener = new CheckBoxListener();
-        pairCheckbox.addActionListener(checkBoxListener);
-        noPairCheckbox.addActionListener(checkBoxListener);
+        pairRadio.addActionListener(checkBoxListener);
+        noPairRadio.addActionListener(checkBoxListener);
 
         /**
          * Create a scroll pane for the outfit list
@@ -133,26 +133,32 @@ public class Panel3 extends JPanel {
     
             // Determine which checkbox is selected and sets the boolean pair accordingly
             Boolean pair = null;
-            if (pairCheckbox.isSelected()) {
+            if (pairRadio.isSelected()) {
                 pair = true;
-            } else if (noPairCheckbox.isSelected()) {
+            } else if (noPairRadio.isSelected()) {
                 pair = false;
             }
 
-            // Checks the rule to see if the two clothing pieces are the same type or category
-            if (clothing1.getType().equals(clothing2.getType())) {
-                JOptionPane.showMessageDialog(null, "Cannot make a rule with two clothing articles of the same type!", "Error", JOptionPane.ERROR_MESSAGE);
-            } else {
-                // Add a new rule with those pieces and the boolean pair
-                Rule rule = new Rule(clothing1, clothing2, pair);
-                SharedRules.rulebook.addRule(rule);
-        
-                // Refresh the list of rules to show the newly added rule
-                ruleListModel.clear();
-                Rule[] rules = SharedRules.rulebook.getRules();
-                for (Rule r : rules) {
-                    ruleListModel.addElement(r.toString());
+            if (pair != null) {
+                // Checks the rule to see if the two clothing pieces are the same type or category
+                if (clothing1.getType().equals(clothing2.getType())) {
+                    JOptionPane.showMessageDialog(null,
+                                        "Cannot make a rule with two clothing articles of the same type!", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    // Add a new rule with those pieces and the boolean pair
+                    Rule rule = new Rule(clothing1, clothing2, pair);
+                    SharedRules.rulebook.addRule(rule);
+            
+                    // Refresh the list of rules to show the newly added rule
+                    ruleListModel.clear();
+                    Rule[] rules = SharedRules.rulebook.getRules();
+                    for (Rule r : rules) {
+                        ruleListModel.addElement(r.toString());
+                    }
                 }
+            } else {
+                JOptionPane.showMessageDialog(null,
+                                        "Please select either Pair or Don't Pair!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -185,10 +191,10 @@ public class Panel3 extends JPanel {
     public class CheckBoxListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (e.getSource() == pairCheckbox) {
-                noPairCheckbox.setSelected(false);
-            } else if (e.getSource() == noPairCheckbox) {
-                pairCheckbox.setSelected(false);
+            if (e.getSource() == pairRadio) {
+                noPairRadio.setSelected(false);
+            } else if (e.getSource() == noPairRadio) {
+                pairRadio.setSelected(false);
             }
         }
     }
