@@ -8,7 +8,7 @@ Working prototype for the program I've been designing over the course of the sem
 
 UI provided by FlatLaf: https://github.com/JFormDesigner/FlatLaf
 
-## Folder Structure
+## Folder Structure (VSCode Default)
 
 The workspace contains two folders by default, where:
 
