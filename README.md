@@ -8,6 +8,13 @@ Working prototype for the program I've been designing over the course of the sem
 
 UI provided by FlatLaf: https://github.com/JFormDesigner/FlatLaf
 
+
+## How to Run
+
+Either download the .exe from the releases, or run the jar file. If neither work, you can
+download the source code and run the program from App.java.
+
+
 ## Folder Structure (VSCode Default)
 
 The workspace contains two folders by default, where:
