@@ -17,7 +17,7 @@ download the source code and run the program from App.java.
 
 ## Testing
 
-For convienience, several .txt files are available in the /test_clothing folder that load clothing into
+For convenience, several .txt files are available in the /test_clothing folder that load clothing into
 the wardrobe.
 
 
