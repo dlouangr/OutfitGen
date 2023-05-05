@@ -1,8 +1,14 @@
-## Getting Started
+## Outfit Generator
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+OutfitGen - Created by Dominique Louangrath for ITCS 3112
 
-## Folder Structure
+
+Working prototype for the program I've been designing over the course of the semester.
+
+
+UI provided by FlatLaf: https://github.com/JFormDesigner/FlatLaf
+
+## Folder Structure (VSCode Default)
 
 The workspace contains two folders by default, where:
 
@@ -12,7 +18,3 @@ The workspace contains two folders by default, where:
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
 > If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
