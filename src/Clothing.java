@@ -9,7 +9,7 @@ public class Clothing {
     private String category;
 
     public Clothing(String type, String category) {
-        if (type.isBlank()) {
+        if (type.isEmpty()) {
             if (Arrays.asList(getCategoryTops()).contains(category)) {
                 this.type = "Top";
             } else if (Arrays.asList(getCategoryBottoms()).contains(category)) {
